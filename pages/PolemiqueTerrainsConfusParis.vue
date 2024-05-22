@@ -31,7 +31,7 @@
       id: 2,
       heading: "Les Partisans de la Réhabilitation",
       content: "Certains voient dans les terrains confus une opportunité unique de réaménagement urbain. Ils préconisent la transformation de ces espaces en parcs, en jardins communautaires, ou en centres culturels, apportant ainsi de la valeur ajoutée à la ville.",
-      image: { src: '/terrainconfuss.jpg', alt: "Réhabilitation des terrains confus" }
+      image: { src: '/terrconfuss.jpg', alt: "Réhabilitation des terrains confus" }
     },
     {
       id: 3,

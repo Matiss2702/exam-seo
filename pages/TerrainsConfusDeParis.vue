@@ -1,4 +1,5 @@
 <template>
+  <div class="page">
     <article>
       <header>
         <h1>{{ title }}</h1>
@@ -13,7 +14,8 @@
         <p>{{ conclusion }}</p>
       </footer>
     </article>
-  </template>
+  </div>
+</template>
   
   <script setup>
   import { ref } from 'vue';
@@ -47,6 +49,64 @@
     }
   ]);
   const conclusion = ref("Les terrains confus de Paris sont des espaces fascinants qui reflètent la complexité et la dynamique de la ville. Ils offrent un aperçu unique de l'évolution urbaine et de la manière dont nous pouvons réimaginer les espaces urbains.");
+  useHead({
+    title: 'Les Terrains Confus de Paris : Une Exploration Urbaine',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Découvrez les terrains confus de Paris, des espaces urbains uniques en transition qui offrent une perspective fascinante sur la dynamique urbaine et des opportunités de développement.'
+      },
+      {
+        hid: 'keywords',
+        name: 'keywords',
+        content: 'terrain confus, Paris, espaces urbains, réaménagement, friches industrielles, Petite Ceinture, Plaine Saint-Denis'
+      },
+      {
+        hid: 'og:title',
+        property: 'og:title',
+        content: 'Les Terrains Confus de Paris : Une Exploration Urbaine'
+      },
+      {
+        hid: 'og:description',
+        property: 'og:description',
+        content: 'Découvrez les terrains confus de Paris, des espaces urbains uniques en transition qui offrent une perspective fascinante sur la dynamique urbaine et des opportunités de développement.'
+      },
+      {
+        hid: 'og:image',
+        property: 'og:image',
+        content: '/terrain confus.jpg'
+      },
+      {
+        hid: 'og:url',
+        property: 'og:url',
+        content: 'https://www.confus-terrain.com'
+      },
+      {
+        hid: 'twitter:card',
+        name: 'twitter:card',
+        content: 'summary_large_image'
+      },
+      {
+        hid: 'twitter:title',
+        name: 'twitter:title',
+        content: 'Les Terrains Confus de Paris : Une Exploration Urbaine'
+      },
+      {
+        hid: 'twitter:description',
+        name: 'twitter:description',
+        content: 'Découvrez les terrains confus de Paris, des espaces urbains uniques en transition qui offrent une perspective fascinante sur la dynamique urbaine et des opportunités de développement.'
+      },
+      {
+        hid: 'twitter:image',
+        name: 'twitter:image',
+        content: '/terrain confus.jpg'
+      }
+    ],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    ]
+  })
   </script>
   
   <style scoped>
@@ -103,6 +163,9 @@
     font-weight: bold;
     text-align: center;
     color: #16a085;
+  }
+  .page {
+    padding: 20px;
   }
   </style>
   

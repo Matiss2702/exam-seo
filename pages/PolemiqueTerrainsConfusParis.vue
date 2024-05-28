@@ -1,4 +1,5 @@
 <template>
+  <div class="page">
     <article>
       <header>
         <h1>{{ title }}</h1>
@@ -13,6 +14,7 @@
         <p>{{ conclusion }}</p>
       </footer>
     </article>
+  </div>
   </template>
   
   <script setup>
@@ -47,6 +49,65 @@
     }
   ]);
   const conclusion = ref("La polémique autour des terrains confus à Paris est complexe et multifacette. Entre conservation de la biodiversité et réhabilitation urbaine, les décisions prises aujourd'hui façonneront le visage de Paris pour les années à venir.");
+  
+  useHead({
+  title: 'La Polémique des Terrains Confus à Paris : Débats et Enjeux',
+  meta: [
+    {
+      hid: 'description',
+      name: 'description',
+      content: 'Découvrez les débats et enjeux autour des terrains confus à Paris. Explorez les points de vue sur la réhabilitation et la conservation de ces espaces urbains uniques.'
+    },
+    {
+      hid: 'keywords',
+      name: 'keywords',
+      content: 'terrain confus, Paris, débats, enjeux, réhabilitation, biodiversité, développement urbain'
+    },
+    {
+      hid: 'og:title',
+      property: 'og:title',
+      content: 'La Polémique des Terrains Confus à Paris : Débats et Enjeux'
+    },
+    {
+      hid: 'og:description',
+      property: 'og:description',
+      content: 'Découvrez les débats et enjeux autour des terrains confus à Paris. Explorez les points de vue sur la réhabilitation et la conservation de ces espaces urbains uniques.'
+    },
+    {
+      hid: 'og:image',
+      property: 'og:image',
+      content: '/terrain confus.jpg'
+    },
+    {
+      hid: 'og:url',
+      property: 'og:url',
+      content: 'https://www.confus-terrain.com/polemique-terrain-confus'
+    },
+    {
+      hid: 'twitter:card',
+      name: 'twitter:card',
+      content: 'summary_large_image'
+    },
+    {
+      hid: 'twitter:title',
+      name: 'twitter:title',
+      content: 'La Polémique des Terrains Confus à Paris : Débats et Enjeux'
+    },
+    {
+      hid: 'twitter:description',
+      name: 'twitter:description',
+      content: 'Découvrez les débats et enjeux autour des terrains confus à Paris. Explorez les points de vue sur la réhabilitation et la conservation de ces espaces urbains uniques.'
+    },
+    {
+      hid: 'twitter:image',
+      name: 'twitter:image',
+      content: '/terrain confus.jpg'
+    }
+  ],
+  link: [
+    { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+  ]
+})
   </script>
   
   <style scoped>
@@ -103,6 +164,9 @@
     font-weight: bold;
     text-align: center;
     color: #16a085;
+  }
+  .page {
+    padding: 20px;
   }
   </style>
   

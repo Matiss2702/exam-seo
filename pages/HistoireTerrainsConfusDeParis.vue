@@ -1,4 +1,6 @@
 <template>
+  <div class="page">
+
     <article>
       <header>
         <h1>{{ title }}</h1>
@@ -13,6 +15,7 @@
         <p>{{ conclusion }}</p>
       </footer>
     </article>
+  </div>
   </template>
   
   <script setup>
@@ -47,6 +50,64 @@
     }
   ]);
   const conclusion = ref("Les terrains confus de Paris illustrent parfaitement l'évolution de la ville. En comprenant leur histoire et leur transformation, nous pouvons mieux appréhender les défis et les opportunités qu'ils représentent pour le futur urbain.");
+  useHead({
+  title: "L'Histoire et l'Évolution des Terrains Confus à Paris",
+  meta: [
+    {
+      hid: 'description',
+      name: 'description',
+      content: "Découvrez l'histoire et l'évolution des terrains confus à Paris. Explorez comment ces espaces urbains en transition ont reflété les changements économiques et sociaux de la ville au fil du temps."
+    },
+    {
+      hid: 'keywords',
+      name: 'keywords',
+      content: 'terrain confus, Paris, histoire, évolution, transformation industrielle, réappropriation, développement urbain'
+    },
+    {
+      hid: 'og:title',
+      property: 'og:title',
+      content: "L'Histoire et l'Évolution des Terrains Confus à Paris"
+    },
+    {
+      hid: 'og:description',
+      property: 'og:description',
+      content: "Découvrez l'histoire et l'évolution des terrains confus à Paris. Explorez comment ces espaces urbains en transition ont reflété les changements économiques et sociaux de la ville au fil du temps."
+    },
+    {
+      hid: 'og:image',
+      property: 'og:image',
+      content: '/terrain confus.jpg'
+    },
+    {
+      hid: 'og:url',
+      property: 'og:url',
+      content: 'https://www.confus-terrain.com/histoire-evolution-terrain-confus'
+    },
+    {
+      hid: 'twitter:card',
+      name: 'twitter:card',
+      content: 'summary_large_image'
+    },
+    {
+      hid: 'twitter:title',
+      name: 'twitter:title',
+      content: "L'Histoire et l'Évolution des Terrains Confus à Paris"
+    },
+    {
+      hid: 'twitter:description',
+      name: 'twitter:description',
+      content: "Découvrez l'histoire et l'évolution des terrains confus à Paris. Explorez comment ces espaces urbains en transition ont reflété les changements économiques et sociaux de la ville au fil du temps."
+    },
+    {
+      hid: 'twitter:image',
+      name: 'twitter:image',
+      content: '/terrain confus.jpg'
+    }
+  ],
+  link: [
+    { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+  ]
+})
   </script>
   
   <style scoped>
@@ -103,6 +164,9 @@
     font-weight: bold;
     text-align: center;
     color: #16a085;
+  }
+  .page {
+      padding: 20px;
   }
   </style>
   

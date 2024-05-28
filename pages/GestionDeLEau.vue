@@ -15,18 +15,66 @@
     </div>
 </template>
 
-<!-- Le script setup et les styles restent inchangés -->
-
-
 <script setup>
-// import { defineProps } from 'vue'
+useHead({
+  title: "Gestion de l'Eau pour un Terrain Confus : Maintenir la Clarté et l'Équilibre",
+  meta: [
+    {
+      hid: 'description',
+      name: 'description',
+      content: "Découvrez des méthodes de gestion durable de l'eau pour un terrain confus. Apprenez comment maintenir la clarté et l'équilibre de votre environnement grâce à des stratégies efficaces de gestion de l'eau."
+    },
+    {
+      hid: 'keywords',
+      name: 'keywords',
+      content: 'terrain confus, gestion de l\'eau, durabilité, clarté, équilibre, environnement'
+    },
+    {
+      hid: 'og:title',
+      property: 'og:title',
+      content: "Gestion de l'Eau pour un Terrain Confus : Maintenir la Clarté et l'Équilibre"
+    },
+    {
+      hid: 'og:description',
+      property: 'og:description',
+      content: "Découvrez des méthodes de gestion durable de l'eau pour un terrain confus. Apprenez comment maintenir la clarté et l'équilibre de votre environnement grâce à des stratégies efficaces de gestion de l'eau."
+    },
+    {
+      hid: 'og:image',
+      property: 'og:image',
+      content: '/favicon.ico'
+    },
+    {
+      hid: 'og:url',
+      property: 'og:url',
+      content: 'https://www.confus-terrain.com/gestion-eau-terrain-confus'
+    },
+    {
+      hid: 'twitter:card',
+      name: 'twitter:card',
+      content: 'summary_large_image'
+    },
+    {
+      hid: 'twitter:title',
+      name: 'twitter:title',
+      content: "Gestion de l'Eau pour un Terrain Confus : Maintenir la Clarté et l'Équilibre"
+    },
+    {
+      hid: 'twitter:description',
+      name: 'twitter:description',
+      content: "Découvrez des méthodes de gestion durable de l'eau pour un terrain confus. Apprenez comment maintenir la clarté et l'équilibre de votre environnement grâce à des stratégies efficaces de gestion de l'eau."
+    },
+    {
+      hid: 'twitter:image',
+      name: 'twitter:image',
+      content: '/favicon.ico'
+    }
+  ],
+  link: [
+    { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+  ]
+})
 
-// // Props
-// const props = defineProps({
-//   // Add any props if needed
-// })
-
-// Data, methods, etc.
 </script>
 
 <style scoped>

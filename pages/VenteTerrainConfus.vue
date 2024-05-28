@@ -1,4 +1,6 @@
 <template>
+  <div class="page">
+
     <article>
       <header>
         <h1>{{ title }}</h1>
@@ -13,6 +15,7 @@
         <p>{{ conclusion }}</p>
       </footer>
     </article>
+  </div>
   </template>
   
   <script setup>
@@ -47,6 +50,65 @@
     }
   ]);
   const conclusion = ref("Les terrains confus à Paris offrent une occasion en or pour les investisseurs immobiliers. En comprenant les avantages et les défis associés à ces terrains, vous pouvez transformer ces espaces en projets prospères et innovants.");
+  
+  useHead({
+    title: 'Opportunités de Vente des Terrains Confus à Paris',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Découvrez les opportunités uniques d\'investissement dans les terrains confus à Paris. Transformez ces espaces en projets immobiliers prospères et innovants.'
+      },
+      {
+        hid: 'keywords',
+        name: 'keywords',
+        content: 'terrain confus, terrains à Paris, opportunités d\'investissement, développement immobilier'
+      },
+      {
+        hid: 'og:title',
+        property: 'og:title',
+        content: 'Opportunités de Vente des Terrains Confus à Paris'
+      },
+      {
+        hid: 'og:description',
+        property: 'og:description',
+        content: 'Découvrez les opportunités uniques d\'investissement dans les terrains confus à Paris. Transformez ces espaces en projets immobiliers prospères et innovants.'
+      },
+      {
+        hid: 'og:image',
+        property: 'og:image',
+        content: '/terrain confus.jpg'
+      },
+      {
+        hid: 'og:url',
+        property: 'og:url',
+        content: 'https://www.confus-terrain.com'
+      },
+      {
+        hid: 'twitter:card',
+        name: 'twitter:card',
+        content: 'summary_large_image'
+      },
+      {
+        hid: 'twitter:title',
+        name: 'twitter:title',
+        content: 'Opportunités de Vente des Terrains Confus à Paris'
+      },
+      {
+        hid: 'twitter:description',
+        name: 'twitter:description',
+        content: 'Découvrez les opportunités uniques d\'investissement dans les terrains confus à Paris. Transformez ces espaces en projets immobiliers prospères et innovants.'
+      },
+      {
+        hid: 'twitter:image',
+        name: 'twitter:image',
+        content: '/terrain confus.jpg'
+      }
+    ],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    ]
+  })
   </script>
   
   <style scoped>
@@ -103,6 +165,9 @@
     font-weight: bold;
     text-align: center;
     color: #16a085;
+  }
+  .page {
+    padding: 20px;
   }
   </style>
   

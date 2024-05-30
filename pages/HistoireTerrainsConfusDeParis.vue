@@ -13,6 +13,17 @@
       </section>
       <footer>
         <p>{{ conclusion }}</p>
+        <div class="navigation">
+          <h3>Explorez d'autres sujets :</h3>
+          <ul>
+            <li><nuxt-link to="/conservationdessols">Conservation des Sols</nuxt-link></li>
+            <li><nuxt-link to="/gestiondeleau">Gestion de l'Eau</nuxt-link></li>
+            <li><nuxt-link to="/biodiversite">Biodiversité</nuxt-link></li>
+            <li><nuxt-link to="/VenteTerrainConfus">Vente Terrain Confus</nuxt-link></li>
+            <li><nuxt-link to="/TerrainsConfusDeParis">Terrains Confus de Paris</nuxt-link></li>
+            <li><nuxt-link to="/HistoireTerrainsConfusDeParis">Histoire des Terrains Confus de Paris</nuxt-link></li>
+          </ul>
+        </div>
       </footer>
     </article>
   </div>
@@ -168,5 +179,34 @@
   .page {
       padding: 20px;
   }
+  .navigation {
+  margin-top: 2em;
+  text-align: center;
+}
+
+.navigation h3 {
+  font-size: 1.5em;
+  color: #2c3e50;
+}
+
+.navigation ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.navigation li {
+  display: inline;
+  margin: 0 10px;
+}
+
+.navigation a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.navigation a:hover {
+  text-decoration: underline;
+}
+
   </style>
   

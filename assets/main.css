@@ -2,6 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: 'Pally';
+    src: url('/fonts/pally/Pally-Variable.woff2') format('woff2');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neco';
+    src: url('/fonts/neco/Neco-Variable.woff2') format('woff2');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neco';
+    src: url('/fonts/neco/Neco-VariableItalic.woff2') format('woff2');
+    font-weight: 100 900;
+    font-style: italic;
+}
+
+@layer utilities {
+    .title {
+        @apply text-3xl lg:text-5xl font-pally text-neutral-950 font-medium;
+    }
+}
+
 :root {
     line-height: 1.5;
     font-weight: 400;

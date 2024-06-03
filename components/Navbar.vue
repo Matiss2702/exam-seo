@@ -1,92 +1,68 @@
 <template>
-  <nav class="navbar">
-    <!-- <div class="container flex justify-between items-center">
-      <a class="navbar-brand" href="/">Éducation Écologique</a>
-      Menu hamburger pour les petits écrans
-      <button @click="toggleNav" class="burger-menu lg:hidden">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-        </svg>
-      </button>
-    </div> -->
+    <!-- Div qui doit faire la taille des différentes navbar !!! -->
+    <div class="h-[70.8px] md:h-[86.39px]" />
     <!-- Menu de navigation -->
-    <ul :class="{ 'hidden': !isNavOpen }" class="navbar-nav lg:flex lg:items-center ml-auto">
-      <li class="nav-item">
-        <nuxt-link to="/conservationdessols" class="nav-link">Conservation des Sols</nuxt-link>
-      </li>
-      <li class="nav-item">
-        <nuxt-link to="/gestiondeleau" class="nav-link">Gestion de l'Eau</nuxt-link>
-      </li>
-      <li class="nav-item">
-        <nuxt-link to="/biodiversite" class="nav-link">Biodiversité</nuxt-link>
-      </li>
-      <li class="nav-item">
-        <nuxt-link to="#" class="nav-link">Terrain Confus</nuxt-link>
-      </li>
-    </ul>
-  </nav>
+    <header class="py-3 text-sm fixed top-0 left-0 right-0 z-50 backdrop-blur-lg bg-white/65 max-md:px-0">
+        <!-- Navbar Tablette / Pc  -->
+        <nav class="container">
+            <ul class="flex gap-x-8 items-center font-pally text-base max-md:hidden">
+                <li class="hover:text-primary-400">
+                    <nuxt-link to="/conservationdessols" class="">Conservation des Sols</nuxt-link>
+                </li>
+                <li class="hover:text-primary-400">
+                    <nuxt-link to="/gestiondeleau" class="">Gestion de l'Eau</nuxt-link>
+                </li>
+                <li class="flex-1 justify-center flex">
+                    <nuxt-link class="hover:scale-105 duration-300 transition-transform" to="/">
+                        <NuxtImg width="48" src="/logo.svg" />
+                    </nuxt-link>
+                </li>
+                <li class="hover:text-primary-400">
+                    <nuxt-link to="/biodiversite" class="">Biodiversité</nuxt-link>
+                </li>
+                <li class="hover:text-primary-400">
+                    <nuxt-link to="#" class="">Terrain Confus</nuxt-link>
+                </li>
+            </ul>
+        </nav>
+        <!-- Navbar Mobile -->
+        <div class="flex justify-between md:hidden items-center container">
+            <nuxt-link class="hover:scale-105 duration-300 transition-transform" to="/">
+                <NuxtImg width="36" src="/logo.svg" />
+            </nuxt-link>
+            <button
+                @click="toggleNav"
+                class="flex justify-center hover:text-primary-400 transition-colors duration-200"
+            >
+                <LucideMenu size="24" />
+            </button>
+        </div>
+        <!-- Menu Navbar Mobile -->
+        <nav :class="!isNavOpen && 'hidden'">
+            <ul class="flex flex-col gap-y-8 items-center font-pally text-base">
+                <li class="hover:text-primary-500">
+                    <nuxt-link to="/conservationdessols" class="">Conservation des Sols</nuxt-link>
+                </li>
+                <li class="hover:text-primary-500">
+                    <nuxt-link to="/gestiondeleau" class="">Gestion de l'Eau</nuxt-link>
+                </li>
+                <li class="hover:text-primary-500">
+                    <nuxt-link to="/biodiversite" class="">Biodiversité</nuxt-link>
+                </li>
+                <li class="hover:text-primary-500">
+                    <nuxt-link to="#" class="">Terrain Confus</nuxt-link>
+                </li>
+            </ul>
+        </nav>
+    </header>
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref } from "vue";
 
 const isNavOpen = ref(false);
 
 const toggleNav = () => {
-  isNavOpen.value = !isNavOpen.value;
+    isNavOpen.value = !isNavOpen.value;
 };
 </script>
-
-<style scoped>
-.navbar {
-  background-color: #007bff;
-  color: #fff;
-  padding: 10px 0;
-}
-
-.navbar-brand {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #fff;
-  text-decoration: none;
-}
-
-.navbar-nav {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column; /* Pour les petits écrans, afficher les éléments verticalement */
-  align-items: center; /* Centrer les éléments horizontalement */
-}
-
-.nav-item {
-  margin-top: 10px; /* Ajouter un espace entre chaque élément */
-}
-
-.nav-link {
-  color: #fff;
-  text-decoration: none;
-}
-
-.nav-link:hover {
-  text-decoration: underline;
-}
-
-/* Menu hamburger */
-.burger-menu {
-  cursor: pointer;
-}
-
-/* Menu de navigation pour les grands écrans */
-@media (min-width: 768px) {
-  .navbar-nav {
-    flex-direction: row; /* Afficher les éléments horizontalement */
-    align-items: center; /* Aligner les éléments au centre */
-  }
-  .nav-item {
-    margin-left: 20px; /* Ajuster l'espacement entre les éléments */
-    margin-top: 0; /* Réinitialiser la marge pour les grands écrans */
-  }
-}
-</style>

@@ -1,23 +1,23 @@
 <template>
   <div class="flex flex-col gap-y-16">
-    <ConservationHero
+    <PageHero
       title="Conservation des Sols pour Prévenir un Terrain Confus"
       paragraph="Découvrez l'importance cruciale de la conservation des sols pour prévenir l'érosion et maintenir la clarté de
       votre terrain."
       imageSrc="/conservation.jpg"
     />
     <div class="flex flex-col gap-y-10">
-      <h3 class="title text-center">Quelques pratiques recommandées</h3>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <ConservationCard
+      <h3 class="text-center title">Quelques pratiques recommandées</h3>
+      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <PageCard
           title="Utilisation de techniques de culture sans labour pour éviter de perturber la structure du terrain."
           imageSrc="/labourless.jpg"
         />
-        <ConservationCard
+        <PageCard
           title="Plantation d'arbres pour prévenir l'érosion et maintenir la stabilité du terrain."
           imageSrc="/plantation2.jpg"
         />
-        <ConservationCard
+        <PageCard
           title="Maintien d'une couverture végétale permanente pour protéger la surface du terrain et éviter sa confusion."
           imageSrc="/greencover.jpg"
         />
@@ -27,8 +27,8 @@
 </template>
 
 <script setup>
-import ConservationHero from "/components/ConservationPage/ConservationHero.vue";
-import ConservationCard from "/components/ConservationPage/ConservationCard.vue";
+import PageHero from "/components/PageHero.vue";
+import PageCard from "/components/PageCard.vue";
 useHead({
   title: "Conservation des Sols pour Prévenir un Terrain Confus",
   meta: [

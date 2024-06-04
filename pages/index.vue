@@ -1,6 +1,6 @@
 <template>
-  <div class="container flex flex-col gap-y-12 sm:gap-y-16 md:gap-y-20 lg:gap-y-24">
-    <Hero />
+  <div class="flex flex-col gap-y-12 sm:gap-y-16 md:gap-y-20 lg:gap-y-24">
+    <HomeHero />
     <div class="flex flex-col gap-y-4 sm:gap-y-8 md:gap-y-12 lg:gap-y-14">
       <HomeSection
         title="Notre Mission"
@@ -84,7 +84,10 @@
 </template>
 
 <script setup>
-import HomeSourceCard from "../components/HomeSourceCard.vue";
+import HomeHero from "/components/HomePage/HomeHero.vue";
+import HomeSourceCard from "/components/HomePage/HomeSourceCard.vue";
+import HomeCard from "/components/HomePage/HomeCard.vue";
+import HomeSection from "/components/HomePage/HomeSection.vue";
 useHead({
   title: "Terrain Confus - Découvrez les terrains confus à Paris et ailleurs",
   meta: [

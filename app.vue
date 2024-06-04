@@ -1,7 +1,7 @@
 <template>
-  <div class="font-neco">
+  <div class="font-neco flex flex-col min-h-screen">
     <Navbar />
-    <main class="mt-4 mb-12">
+    <main class="mt-4 mb-12 flex-1 container">
       <NuxtPage />
     </main>
     <Footer />
@@ -10,19 +10,5 @@
 
 <style scoped>
 #app {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  /* La hauteur minimum de la page est la hauteur de la fenêtre du navigateur */
-}
-
-main {
-  flex-grow: 1;
-  /* Le contenu principal prendra toute la hauteur restante */
-}
-
-.footer {
-  margin-top: auto;
-  /* Le footer sera toujours en bas de la page */
 }
 </style>

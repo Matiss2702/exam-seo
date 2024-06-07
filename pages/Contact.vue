@@ -6,17 +6,23 @@
       Éducation Écologique pour un Terrain Confus. Nous sommes là pour vous aider à mieux comprendre les enjeux
       écologiques et à préserver la clarté de votre terrain."
       secondParagraph="Toujours perdu ? Le formulaire pour prendre contact avec nos services ce situe juste en dessous !"
-      firstImageSrc="/contactus.jpg"
-      secondImageSrc="/questions.jpg"
-      thirdImageSrc="/down.jpg"
+      firstImageSrc="/contactus.webp"
+      secondImageSrc="/questions.webp"
+      thirdImageSrc="/down.webp"
+      firstImageAlt="Contactez-nous"
+      secondImageAlt="Réflexion"
+      thirdImageAlt="Pointe en bas"
     />
     <!-- Ajoutez ici un formulaire de contact -->
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import FooterPages from "/components/FooterPages.vue";
 useHead({
+  htmlAttrs: {
+    lang: "fr",
+  },
   title: "Contactez-nous pour un Terrain Clair et Non Confus",
   meta: [
     {

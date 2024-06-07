@@ -1,5 +1,5 @@
 <template>
-  <section class="grid grid-cols-1 sm:grid-cols-2 items-center gap-x-16 lg:gap-x-24 max-sm:gap-y-2 group/homesection">
+  <section class="grid items-center grid-cols-1 sm:grid-cols-2 gap-x-16 lg:gap-x-24 max-sm:gap-y-2 group/homesection">
     <div
       :class="[
         'flex flex-col gap-y-1 sm:gap-y-3 transition-transform duration-300',
@@ -15,6 +15,7 @@
         reverse ? 'group-hover/homesection:translate-x-4' : 'group-hover/homesection:-translate-x-4',
       ]"
       :src="imageSrc"
+      :alt="imageAlt"
     />
   </section>
 </template>
@@ -24,6 +25,7 @@ defineProps({
   title: String,
   text: String,
   imageSrc: String,
+  imageAlt: String,
   reverse: Boolean,
 });
 </script>

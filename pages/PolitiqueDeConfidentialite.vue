@@ -8,15 +8,21 @@
       explicite. De plus, nous utilisons des mesures de sécurité avancées pour protéger vos informations contre tout
       accès non autorisé ou utilisation abusive. Si vous avez des questions ou des préoccupations concernant notre
       politique de confidentialité, n'hésitez pas à nous contacter."
-    firstImageSrc="/confidentiality.jpg"
-    secondImageSrc="/personnaldata.jpg"
-    thirdImageSrc="/donotshare.jpg"
+    firstImageSrc="/confidentiality.webp"
+    secondImageSrc="/personnaldata.webp"
+    thirdImageSrc="/donotshare.webp"
+    firstImageAlt="Confidentialité"
+    secondImageAlt="Données personnelles"
+    thirdImageAlt="Personne qui refuse"
   />
 </template>
 
-<script setup>
+<script setup lang="ts">
 import FooterPages from "/components/FooterPages.vue";
 useHead({
+  htmlAttrs: {
+    lang: "fr",
+  },
   title: "Politique de Confidentialité - Éducation Écologique pour un Terrain Confus",
   meta: [
     {

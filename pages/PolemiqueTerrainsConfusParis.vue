@@ -28,96 +28,108 @@
   </div>
 </template>
 
-<script setup>
-import { ref } from 'vue';
+<script setup lang="ts">
+import { ref } from "vue";
 
 const title = ref("La Polémique des Terrains Confus à Paris : Débats et Enjeux");
-const introduction = ref("Les terrains confus à Paris sont au cœur d'une polémique intense. Découvrons les différents points de vue et les enjeux qui entourent ces espaces urbains en transition.");
+const introduction = ref(
+  "Les terrains confus à Paris sont au cœur d'une polémique intense. Découvrons les différents points de vue et les enjeux qui entourent ces espaces urbains en transition."
+);
 const sections = ref([
   {
     id: 1,
     heading: "Qu'est-ce qu'un Terrain Confus ?",
-    content: "Les terrains confus sont des espaces urbains abandonnés ou sous-utilisés. À Paris, ces terrains sont souvent le résultat de la désindustrialisation ou du déplacement des infrastructures ferroviaires. Ces espaces sont aujourd'hui au centre de nombreux débats.",
-    image: { src: '/terrain confus.jpg', alt: "Exemple de terrain confus à Paris" }
+    content:
+      "Les terrains confus sont des espaces urbains abandonnés ou sous-utilisés. À Paris, ces terrains sont souvent le résultat de la désindustrialisation ou du déplacement des infrastructures ferroviaires. Ces espaces sont aujourd'hui au centre de nombreux débats.",
+    image: { src: "/terrain confus.webp", alt: "Exemple de terrain confus à Paris" },
   },
   {
     id: 2,
     heading: "Les Partisans de la Réhabilitation",
-    content: "Certains voient dans les terrains confus une opportunité unique de réaménagement urbain. Ils préconisent la transformation de ces espaces en parcs, en jardins communautaires, ou en centres culturels, apportant ainsi de la valeur ajoutée à la ville.",
-    image: { src: '/terrconfuss.jpg', alt: "Réhabilitation des terrains confus" }
+    content:
+      "Certains voient dans les terrains confus une opportunité unique de réaménagement urbain. Ils préconisent la transformation de ces espaces en parcs, en jardins communautaires, ou en centres culturels, apportant ainsi de la valeur ajoutée à la ville.",
+    image: { src: "/terrconfuss.webp", alt: "Réhabilitation des terrains confus" },
   },
   {
     id: 3,
     heading: "Les Opposants à la Réhabilitation",
-    content: "D'autres sont contre la réhabilitation des terrains confus, arguant que ces espaces doivent rester intacts pour préserver la biodiversité urbaine et offrir des refuges pour la faune et la flore locales. Ils craignent que la transformation de ces espaces ne nuise à l'écosystème existant.",
-    image: { src: '/terrconf.jpg', alt: "Opposition à la réhabilitation des terrains confus" }
+    content:
+      "D'autres sont contre la réhabilitation des terrains confus, arguant que ces espaces doivent rester intacts pour préserver la biodiversité urbaine et offrir des refuges pour la faune et la flore locales. Ils craignent que la transformation de ces espaces ne nuise à l'écosystème existant.",
+    image: { src: "/terrconf.webp", alt: "Opposition à la réhabilitation des terrains confus" },
   },
   {
     id: 4,
     heading: "Les Enjeux Économiques et Sociaux",
-    content: "La réhabilitation des terrains confus soulève également des questions économiques et sociales. Les projets de développement peuvent entraîner une hausse des prix de l'immobilier et provoquer la gentrification de certains quartiers, excluant ainsi les habitants les plus modestes.",
-    image: { src: '/terrainconfus.jpg', alt: "Enjeux économiques et sociaux des terrains confus" }
-  }
+    content:
+      "La réhabilitation des terrains confus soulève également des questions économiques et sociales. Les projets de développement peuvent entraîner une hausse des prix de l'immobilier et provoquer la gentrification de certains quartiers, excluant ainsi les habitants les plus modestes.",
+    image: { src: "/terrainconfus.webp", alt: "Enjeux économiques et sociaux des terrains confus" },
+  },
 ]);
-const conclusion = ref("La polémique autour des terrains confus à Paris est complexe et multifacette. Entre conservation de la biodiversité et réhabilitation urbaine, les décisions prises aujourd'hui façonneront le visage de Paris pour les années à venir.");
+const conclusion = ref(
+  "La polémique autour des terrains confus à Paris est complexe et multifacette. Entre conservation de la biodiversité et réhabilitation urbaine, les décisions prises aujourd'hui façonneront le visage de Paris pour les années à venir."
+);
 
 useHead({
-  title: 'La Polémique des Terrains Confus à Paris : Débats et Enjeux',
+  htmlAttrs: {
+    lang: "fr",
+  },
+  title: "La Polémique des Terrains Confus à Paris : Débats et Enjeux",
   meta: [
     {
-      hid: 'description',
-      name: 'description',
-      content: 'Découvrez les débats et enjeux autour des terrains confus à Paris. Explorez les points de vue sur la réhabilitation et la conservation de ces espaces urbains uniques.'
+      hid: "description",
+      name: "description",
+      content:
+        "Découvrez les débats et enjeux autour des terrains confus à Paris. Explorez les points de vue sur la réhabilitation et la conservation de ces espaces urbains uniques.",
     },
     {
-      hid: 'keywords',
-      name: 'keywords',
-      content: 'terrain confus, Paris, débats, enjeux, réhabilitation, biodiversité, développement urbain'
+      hid: "keywords",
+      name: "keywords",
+      content: "terrain confus, Paris, débats, enjeux, réhabilitation, biodiversité, développement urbain",
     },
     {
-      hid: 'og:title',
-      property: 'og:title',
-      content: 'La Polémique des Terrains Confus à Paris : Débats et Enjeux'
+      hid: "og:title",
+      property: "og:title",
+      content: "La Polémique des Terrains Confus à Paris : Débats et Enjeux",
     },
     {
-      hid: 'og:description',
-      property: 'og:description',
-      content: 'Découvrez les débats et enjeux autour des terrains confus à Paris. Explorez les points de vue sur la réhabilitation et la conservation de ces espaces urbains uniques.'
+      hid: "og:description",
+      property: "og:description",
+      content:
+        "Découvrez les débats et enjeux autour des terrains confus à Paris. Explorez les points de vue sur la réhabilitation et la conservation de ces espaces urbains uniques.",
     },
     {
-      hid: 'og:image',
-      property: 'og:image',
-      content: '/terrain confus.jpg'
+      hid: "og:image",
+      property: "og:image",
+      content: "/terrain confus.webp",
     },
     {
-      hid: 'og:url',
-      property: 'og:url',
-      content: 'https://www.confus-terrain.com/polemique-terrain-confus'
+      hid: "og:url",
+      property: "og:url",
+      content: "https://www.confus-terrain.com/polemique-terrain-confus",
     },
     {
-      hid: 'twitter:card',
-      name: 'twitter:card',
-      content: 'summary_large_image'
+      hid: "twitter:card",
+      name: "twitter:card",
+      content: "summary_large_image",
     },
     {
-      hid: 'twitter:title',
-      name: 'twitter:title',
-      content: 'La Polémique des Terrains Confus à Paris : Débats et Enjeux'
+      hid: "twitter:title",
+      name: "twitter:title",
+      content: "La Polémique des Terrains Confus à Paris : Débats et Enjeux",
     },
     {
-      hid: 'twitter:description',
-      name: 'twitter:description',
-      content: 'Découvrez les débats et enjeux autour des terrains confus à Paris. Explorez les points de vue sur la réhabilitation et la conservation de ces espaces urbains uniques.'
+      hid: "twitter:description",
+      name: "twitter:description",
+      content:
+        "Découvrez les débats et enjeux autour des terrains confus à Paris. Explorez les points de vue sur la réhabilitation et la conservation de ces espaces urbains uniques.",
     },
     {
-      hid: 'twitter:image',
-      name: 'twitter:image',
-      content: '/terrain confus.jpg'
-    }
+      hid: "twitter:image",
+      name: "twitter:image",
+      content: "/terrain confus.webp",
+    },
   ],
-  link: [
-    { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-  ]
+  link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
 });
 </script>
 

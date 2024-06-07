@@ -3,33 +3,40 @@
     <PageHero
       title="Biodiversité pour un Terrain Confus : Préserver la Clarté et la Richesse Naturelle"
       paragraph="Explorez la richesse de la biodiversité pour maintenir la clarté et l'équilibre de votre terrain confus."
-      imageSrc="/biodiversity.jpg"
+      imageSrc="/biodiversity.webp"
+      imageAlt="Image d'un lézard"
     />
     <div class="flex flex-col gap-y-10">
       <h3 class="text-center title">Quelques actions pour protéger la biodiversité</h3>
       <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         <PageCard
           title="Protection des habitats naturels présents sur le terrain pour maintenir la clarté de l'environnement."
-          imageSrc="/natural.jpg"
+          imageSrc="/natural.webp"
+          imageAlt="Image montrant des habitats naturels"
         />
         <PageCard
           title="Encouragement de la plantation d'espèces indigènes pour favoriser la biodiversité et prévenir la confusion
         écologique sur le terrain."
-          imageSrc="/plantation3.jpg"
+          imageSrc="/plantation3.webp"
+          imageAlt="Image montrant des plantations"
         />
         <PageCard
           title="Sensibilisation à l'impact des espèces invasives sur la santé et la clarté du terrain."
-          imageSrc="/invasivespecies.jpg"
+          imageSrc="/invasivespecies.webp"
+          imageAlt="Image montrant une espèce invasive"
         />
       </div>
     </div>
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import PageHero from "/components/PageHero.vue";
 import PageCard from "/components/PageCard.vue";
 useHead({
+  htmlAttrs: {
+    lang: "fr",
+  },
   title: "Biodiversité pour un Terrain Confus : Préserver la Clarté et la Richesse Naturelle",
   meta: [
     {

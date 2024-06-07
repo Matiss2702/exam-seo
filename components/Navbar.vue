@@ -14,7 +14,7 @@
         </li>
         <li class="flex justify-center flex-1">
           <nuxt-link class="transition-transform duration-300 hover:scale-105" to="/">
-            <NuxtImg width="48" src="/logo.svg" />
+            <NuxtImg width="48" src="/logo.svg" alt="Logo Terrain Confus" />
           </nuxt-link>
         </li>
         <li class="hover:text-primary-400">
@@ -28,9 +28,13 @@
     <!-- Navbar Mobile -->
     <div class="container flex items-center justify-between md:hidden">
       <nuxt-link class="transition-transform duration-300 hover:scale-105" to="/">
-        <NuxtImg width="36" src="/logo.svg" />
+        <NuxtImg width="36" height="36" src="/logo.svg" alt="Logo Terrain Confus" />
       </nuxt-link>
-      <button @click="toggleNav" class="flex justify-center transition-colors duration-200 hover:text-primary-400">
+      <button
+        aria-label="Menu"
+        @click="toggleNav"
+        class="flex justify-center transition-colors duration-200 hover:text-primary-400"
+      >
         <LucideMenu size="24" />
       </button>
     </div>

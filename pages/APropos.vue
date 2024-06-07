@@ -5,15 +5,21 @@
             prévenir un terrain confus en sensibilisant aux enjeux écologiques liés à la conservation des sols, à la
             gestion de l'eau et à la biodiversité."
     secondParagraph="Nous nous engageons à fournir un contenu de sécurité pour aider nos visiteurs à comprendre l'importance de maintenir la clarté et l'équilibre de leur terrain et de contribuer ainsi à un environnement plus sain et durable."
-    firstImageSrc="/aboutus.jpg"
-    secondImageSrc="/studentressources.jpg"
-    thirdImageSrc="/securitycontent.jpg"
+    firstImageSrc="/aboutus.webp"
+    secondImageSrc="/studentressources.webp"
+    thirdImageSrc="/securitycontent.webp"
+    firstImageAlt="A propos de nous"
+    secondImageAlt="Education ecologique"
+    thirdImageAlt="Sécurité"
   />
 </template>
 
-<script setup>
+<script setup lang="ts">
 import FooterPages from "/components/FooterPages.vue";
 useHead({
+  htmlAttrs: {
+    lang: "fr",
+  },
   title: "À Propos de Éducation Écologique pour un Terrain Confus",
   meta: [
     {

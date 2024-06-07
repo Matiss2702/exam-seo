@@ -4,7 +4,8 @@
       title="Gestion de l'Eau pour un Terrain Confus : Maintenir la Clarté et l'Équilibre"
       paragraph="Découvrez des méthodes de gestion durable de l'eau pour prévenir un terrain confus et maintenir la clarté ainsi
       que l'équilibre de votre environnement."
-      imageSrc="/clearwater.jpg"
+      imageSrc="/clearwater.webp"
+      imageAlt="Image montrant de l'eau claire"
     />
     <div class="flex flex-col gap-y-10">
       <h3 class="text-center title">Quelques stratégies pour la gestion de l'eau</h3>
@@ -12,27 +13,33 @@
         <PageCard
           title="Collecte et stockage des eaux de pluie pour une utilisation efficace et rationnelle, préservant ainsi la clarté
         du terrain."
-          imageSrc="/watercollect.jpg"
+          imageSrc="/watercollect.webp"
+          imageAlt="Image montrant une personne récolter de l'eau"
         />
         <PageCard
           title="Récupération des eaux usées pour un usage non potable, contribuant ainsi à maintenir l'eau du terrain claire et
         saine."
-          imageSrc="/wastewater.jpg"
+          imageSrc="/wastewater.webp"
+          imageAlt="Image montrant des eaux usées"
         />
         <PageCard
           title="Utilisation de techniques d'irrigation efficaces pour minimiser le gaspillage d'eau et maintenir la clarté du
         terrain."
-          imageSrc="/waterirrigation.jpg"
+          imageSrc="/waterirrigation.webp"
+          imageAlt="Image montrant une irrigation"
         />
       </div>
     </div>
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import PageHero from "/components/PageHero.vue";
 import PageCard from "/components/PageCard.vue";
 useHead({
+  htmlAttrs: {
+    lang: "fr",
+  },
   title: "Gestion de l'Eau pour un Terrain Confus : Maintenir la Clarté et l'Équilibre",
   meta: [
     {

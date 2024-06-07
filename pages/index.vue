@@ -5,21 +5,22 @@
       <HomeSection
         title="Notre Mission"
         text="Chez Éducation Écologique, notre mission est de sensibiliser le public aux enjeux écologiques et de promouvoir des pratiques durables pour préserver la biodiversité et les ressources naturelles."
-        imageSrc="/sensibilisation.jpg"
+        imageSrc="/sensibilisation.webp"
+        imageAlt="Image d'une personne sensibilisée"
         :reverse="false"
       />
       <HomeSection
         title="Pourquoi Préserver les Terrains Confus ?"
         text="Les terrains confus, souvent oubliés, jouent un rôle crucial dans le maintien de la biodiversité urbaine. Ils servent de refuge à de nombreuses espèces et contribuent à la résilience écologique des villes."
-        imageSrc="/animal.png"
+        imageSrc="/animal.webp"
+        imageAlt="Image d'un lapin"
         :reverse="true"
       />
       <HomeSection
         title="Actions et Initiatives"
-        text="Nous menons diverses initiatives pour la conservation des terrains confus, incluant des campagnes de
-                plantation, des ateliers éducatifs et des collaborations avec des organisations locales et
-                internationales."
-        imageSrc="/actnow.jpg"
+        text="Nous menons diverses initiatives pour la conservation des terrains confus, incluant des campagnes de plantation, des ateliers éducatifs et des collaborations avec des organisations locales et internationales."
+        imageSrc="/actnow.webp"
+        imageAlt="Image d'actions"
         :reverse="false"
       />
     </div>
@@ -75,20 +76,33 @@
     <div class="flex flex-col gap-y-6 sm:gap-y-10">
       <h2 class="title">Nos sources</h2>
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-y-4 sm:gap-6">
-        <HomeSourceCard title="WWF France" path="https://www.wwf.fr" imageSrc="/wwf.png" />
-        <HomeSourceCard title="Greenpeace France" path="https://www.greenpeace.org/france" imageSrc="/greenpeace.png" />
-        <HomeSourceCard title="FAO" path="https://www.fao.org" imageSrc="/fao.png" />
+        <HomeSourceCard
+          title="WWF France"
+          path="https://www.wwf.fr"
+          imageSrc="/wwf.webp"
+          imageAlt="Image du site WWF France"
+        />
+        <HomeSourceCard
+          title="Greenpeace France"
+          path="https://www.greenpeace.org/france"
+          imageSrc="/greenpeace.webp"
+          imageAlt="Image du site Greenpeace"
+        />
+        <HomeSourceCard title="FAO" path="https://www.fao.org" imageSrc="/fao.webp" imageAlt="Image du site FAO" />
       </div>
     </div>
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import HomeHero from "/components/HomePage/HomeHero.vue";
 import HomeSourceCard from "/components/HomePage/HomeSourceCard.vue";
 import HomeCard from "/components/HomePage/HomeCard.vue";
 import HomeSection from "/components/HomePage/HomeSection.vue";
 useHead({
+  htmlAttrs: {
+    lang: "fr",
+  },
   title: "Terrain Confus - Découvrez les terrains confus à Paris et ailleurs",
   meta: [
     {

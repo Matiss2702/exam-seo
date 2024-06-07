@@ -12,8 +12,12 @@
       </p>
     </div>
     <NuxtImg
-      class="size-full object-cover rounded-3xl brightness-[0.45] group-hover/plantation:scale-105 transition-transform duration-300"
-      src="/plantation.png"
+      preload
+      class="rounded-3xl size-full object-cover brightness-[0.45] group-hover/plantation:scale-105 transition-transform duration-300"
+      width="1336"
+      height="556"
+      alt="Image de présentation"
+      src="/plantation.webp"
     />
   </div>
 </template>

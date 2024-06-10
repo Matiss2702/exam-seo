@@ -3,12 +3,12 @@ import fs from "fs";
 import path from "path";
 
 export default defineNuxtConfig({
-    target: "static", // Ajoutez cette ligne pour générer un site statique
+    target: "static", // Générer un site statique
     modules: ["@nuxtjs/sitemap", "@nuxtjs/robots", "@nuxtjs/tailwindcss", "@nuxt/image", "nuxt-lucide-icons"],
     css: ["./assets/main.css"],
     robots: {
         UserAgent: "*",
-        Disallow: "/admin",
+        Disallow: ["/admin", "/_nuxt"],
         Sitemap: "https://www.confus-terrain.com/sitemap.xml",
     },
     sitemap: {
@@ -18,10 +18,12 @@ export default defineNuxtConfig({
             const pagesDir = path.resolve(__dirname, "pages");
             const files = fs.readdirSync(pagesDir);
 
-            const routes = files.map((file) => {
-                const name = file.replace(".vue", "");
-                return name === "index" ? "/" : `/${name}`;
-            });
+            const routes = files
+                .filter((file) => file.endsWith(".vue"))
+                .map((file) => {
+                    const name = file.replace(".vue", "");
+                    return name === "index" ? "/" : `/${name.toLowerCase()}`;
+                });
 
             return routes;
         },

@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .title {
+    @apply font-pally text-3xl font-medium text-neutral-950 lg:text-5xl;
+  }
+}
